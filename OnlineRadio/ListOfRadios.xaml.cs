@@ -10,28 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace OnlineRadio
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ListOfRadios.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ListOfRadios : Window
     {
-        public MainWindow()
+        public ListOfRadios()
         {
             InitializeComponent();
-        }
-
-        ListOfRadios ListOfRadios;
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ListOfRadios = new ListOfRadios();
-            ListOfRadios.Show();
-            Window.GetWindow(this).Close();
         }
     }
 }
