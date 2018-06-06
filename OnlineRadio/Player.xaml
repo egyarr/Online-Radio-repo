@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OnlineRadio"
         mc:Ignorable="d"
-        Title="Player" Height="450" Width="800">
+        Title="Player" Height="300" Width="600">
     <Grid Background="Black">
-        <Image Source="Images\Play.png"></Image>
+        <Image Source="Images\Play.png" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Height="70"></Image>
+        <Image Source="Images\Pause.png" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="60" Margin="0 0 150 10"></Image>
     </Grid>
 </Window>
