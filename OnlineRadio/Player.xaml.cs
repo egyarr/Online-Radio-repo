@@ -15,21 +15,13 @@ using System.Windows.Shapes;
 namespace OnlineRadio
 {
     /// <summary>
-    /// Логика взаимодействия для ListOfRadios.xaml
+    /// Логика взаимодействия для Player.xaml
     /// </summary>
-    public partial class ListOfRadios : Window
+    public partial class Player : Window
     {
-        public ListOfRadios()
+        public Player()
         {
             InitializeComponent();
-        }
-
-        Player pl;
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            pl = new Player();
-            pl.Show();
         }
     }
 }

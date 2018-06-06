@@ -13,8 +13,9 @@
         <Button Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" >
         <Image Source="Images\Arrow_Right.png" Margin="5" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Image>
         </Button>
+        <Button Click="Button_Click_1" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Top">
         <Image Source="Images\Info.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="60"></Image>
-
+        </Button>
 
     </Grid>
 </Window>

@@ -33,5 +33,10 @@ namespace OnlineRadio
             ListOfRadios.Show();
             Window.GetWindow(this).Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Here will be some text");
+        }
     }
 }

@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="ListOfRadios" Height="450" Width="800">
     <Grid Background="Black">
-        
+        <ListBox Background="Black" Foreground="White" HorizontalAlignment="Left" Height="335" Margin="23,33,0,0" VerticalAlignment="Top" Width="567">
+            <ListBoxItem>Radio HSE</ListBoxItem>
+            
+        </ListBox>
+        <Button Content="К плееру" HorizontalAlignment="Left" Margin="693,371,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Window>
