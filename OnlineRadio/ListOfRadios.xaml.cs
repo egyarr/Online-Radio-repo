@@ -25,11 +25,20 @@ namespace OnlineRadio
         }
          
         Player pl;
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             pl = new Player();
             pl.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            pl = new Player();
+            pl.Show();
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"..\\..\\Music\\Valve.wav");
+            player.Play();
         }
     }
 }

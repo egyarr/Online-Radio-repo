@@ -6,13 +6,28 @@
         xmlns:local="clr-namespace:OnlineRadio"
         mc:Ignorable="d"
         Title="ListOfRadios" Height="450" Width="800">
-    <Grid Background="Black">
-        <ListBox Background="Black" Foreground="White" HorizontalAlignment="Left" Height="335" Margin="23,33,0,0" VerticalAlignment="Top" Width="567">
-            <ListBoxItem>Radio HSE</ListBoxItem>
+    <Grid ShowGridLines="True" Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="650"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox Grid.RowSpan="4" Background="Black" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ListBoxItem FontSize="30">Radio HSE</ListBoxItem>
+            <ListBoxItem>
+                <Button FontSize="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Content="Play Valve intro" Click="Button_Click_1"/>
+            </ListBoxItem>
             
         </ListBox>
-        <Button Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20" Click="Button_Click">
-            <Image Source="Images\ToPlayer.png" Height="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20"></Image>
+        <Button Grid.Row="3" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="Button_Click">
+            <Image Source="Images\ToPlayer.png" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Image>
         </Button>
     </Grid>
+    
+
 </Window>

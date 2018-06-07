@@ -23,5 +23,23 @@ namespace OnlineRadio
         {
             InitializeComponent();
         }
+
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            player.Play();
+        }
+
+
+
+
+        
+
     }
 }
