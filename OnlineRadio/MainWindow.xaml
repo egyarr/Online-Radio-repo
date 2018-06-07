@@ -6,15 +6,26 @@
         xmlns:local="clr-namespace:OnlineRadio"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="Black">
-        <Label Margin="10" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Online Radio" FontSize="30" Foreground="White"></Label>
+    <Grid ShowGridLines="True" Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Online Radio" FontSize="30" Foreground="White"></Label>
        
-        <Image Source="Images\EarPhones.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="70"></Image>
-        <Button Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" >
-        <Image Source="Images\Arrow_Right.png" Margin="5" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Image>
+        <Image Source="Images\EarPhones.png" Margin="30" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Image>
+        <Button Click="Button_Click" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" >
+        <Image Source="Images\Arrow_Right.png"></Image>
         </Button>
-        <Button Click="Button_Click_1" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Top">
-        <Image Source="Images\Info.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="60"></Image>
+        <Button Click="Button_Click_1" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+        <Image Source="Images\Info.png"></Image>
         </Button>
 
     </Grid>

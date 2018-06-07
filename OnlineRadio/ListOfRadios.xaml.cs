@@ -40,5 +40,10 @@ namespace OnlineRadio
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"..\\..\\Music\\Valve.wav");
             player.Play();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Here will be some text");
+        }
     }
 }
