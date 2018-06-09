@@ -26,7 +26,6 @@ namespace OnlineRadio
          
         Player pl;
         
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             pl = new Player();
@@ -35,9 +34,16 @@ namespace OnlineRadio
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            pl = new Player();
-            pl.Show();
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"..\\..\\Music\\Valve.wav");
+            if (pl != null)
+            {                
+                player.Play();
+            }
+
+            if (pl == null)
+                pl = new Player();
+            
+            pl.Show();           
             player.Play();
         }
 

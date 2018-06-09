@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OnlineRadio"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Welcome to our program!" Height="450" Width="800">
     <Grid ShowGridLines="True" Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"></ColumnDefinition>
@@ -18,8 +18,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="70"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Online Radio" FontSize="30" Foreground="White"></Label>
-       
+        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Online Radio" FontSize="45" Foreground="White" FontFamily="Harlow Solid Italic"/>
         <Image Source="Images\EarPhones.png" Margin="30" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Image>
         <Button Click="Button_Click" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" >
         <Image Source="Images\Arrow_Right.png"></Image>

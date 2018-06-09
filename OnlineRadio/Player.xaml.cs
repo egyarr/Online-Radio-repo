@@ -28,7 +28,7 @@ namespace OnlineRadio
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -36,10 +36,9 @@ namespace OnlineRadio
             player.Play();
         }
 
-
-
-
-        
-
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            player.Stop();
+        }
     }
 }
