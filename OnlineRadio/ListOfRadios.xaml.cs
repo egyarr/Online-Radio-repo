@@ -49,20 +49,20 @@ namespace OnlineRadio
         //    pl.Show();
         //}
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"..\\..\\Music\\Valve.wav");
-            if (pl != null)
-            {                
-                player.Play();
-            }
+        //private void Button_Click_1(object sender, RoutedEventArgs e)
+        //{
+        //    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"..\\..\\Music\\Valve.wav");
+        //    if (pl != null)
+        //    {                
+        //        player.Play();
+        //    }
 
-            if (pl == null)
-                pl = new Player();
+        //    if (pl == null)
+        //        pl = new Player();
             
-            pl.Show();           
-            player.Play();
-        }
+        //    pl.Show();           
+        //    player.Play();
+        //}
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {

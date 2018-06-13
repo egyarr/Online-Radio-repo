@@ -44,15 +44,9 @@
                 <Button FontSize="30" HorizontalAlignment="Stretch"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Content="Auto Radio" Click="Auto"></Button>
             </ListBoxItem>
 
-
-
-
-
-
-
-            <ListBoxItem>
+            <!--<ListBoxItem>
                 <Button FontSize="30" HorizontalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Content="Play Valve intro" Click="Button_Click_1"/>
-            </ListBoxItem>
+            </ListBoxItem>-->
         </ListBox>
         <!--<Button Grid.Row="3" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5" Click="Button_Click">
             <Image Source="Images\ToPlayer.png"></Image>
