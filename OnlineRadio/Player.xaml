@@ -28,5 +28,11 @@
         <Button Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="0 10 10 10" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click_2">
             <Image Source="Images\Stop.png"></Image>
         </Button>
+        <Button Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="0 5 50 30" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Back">
+            <Image Source="Images\Arrow_Left.png"></Image>
+        </Button>
+        <Label Grid.Column="0" Foreground="White" Grid.ColumnSpan="5" FontSize="21" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Add your link to the internet radio stream here:"></Label>
+        <Label Margin="5" Content="e.g. http://icecast.radiomontecarlo.cdnvideo.ru/st09.mp3" Foreground="Gray" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
+        <TextBox Margin="30" FontSize="22" x:Name="textbox_url" Grid.ColumnSpan="5" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" Background="Gray" Foreground="White"/>
     </Grid>
 </Window>

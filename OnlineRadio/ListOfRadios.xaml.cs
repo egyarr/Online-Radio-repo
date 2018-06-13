@@ -23,7 +23,7 @@ namespace OnlineRadio
     {
 
         WindowsMediaPlayer wmPlayer = new WindowsMediaPlayer();
-        string ROCKurl, CHOCOurl, EUROurl, RETROurl, DORurl;
+        string ROCKurl, CHOCOurl, EUROurl, RETROurl, DORurl, RECurl, BUSurl, AUTOurl;
         string n = "Now playing: ";
         
 
@@ -35,6 +35,9 @@ namespace OnlineRadio
             EUROurl = @"http://ep256.hostingradio.ru:8052/europaplus256.mp3";
             RETROurl = @"http://retroserver.streamr.ru:8043/retro256.mp3";
             DORurl = @"http://dorognoe.hostingradio.ru:8000/dorognoe";
+            RECurl = @"http://air2.radiorecord.ru:805/rr_64";
+            BUSurl = @"https://bfm.hostingradio.ru:9075/fm";
+            AUTOurl = @"http://ic2.101.ru:8000/v3_1";
         }
          
         Player pl;
@@ -63,7 +66,10 @@ namespace OnlineRadio
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Here will be some text");
+            MessageBoxResult result = MessageBox.Show("In this window you can choose which radio do you want to listen. " +
+                "Moreover, you can listen to your own internet radio stream by using CUSTOM URL button. " +
+                "There is a stop button at the bottom of the window. You will stop the music by pressing it. " +
+                "Enjoy yourself!");
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -81,6 +87,14 @@ namespace OnlineRadio
             wmPlayer.controls.stop();
             Now_playing.Content = "Nothing is playing now";
             img.Visibility = Visibility.Hidden;
+        }
+
+        private void ToPlayer(object sender, RoutedEventArgs e)
+        {
+            
+            pl = new Player();
+            pl.Show();
+            Window.GetWindow(this).Close();
         }
 
         private void Chocolate(object sender, RoutedEventArgs e)
@@ -117,6 +131,33 @@ namespace OnlineRadio
             wmPlayer.controls.play();
             player.Play();
             Now_playing.Content = n + "Doroznoe Radio";
+            img.Visibility = Visibility.Visible;
+        }
+        private void Record(object sender, RoutedEventArgs e)
+        {
+            wmPlayer.controls.stop();
+            wmPlayer.URL = RECurl;
+            wmPlayer.controls.play();
+            player.Play();
+            Now_playing.Content = n + "Radio Record";
+            img.Visibility = Visibility.Visible;
+        }
+        private void Business(object sender, RoutedEventArgs e)
+        {
+            wmPlayer.controls.stop();
+            wmPlayer.URL = BUSurl;
+            wmPlayer.controls.play();
+            player.Play();
+            Now_playing.Content = n + "Business FM";
+            img.Visibility = Visibility.Visible;
+        }
+        private void Auto(object sender, RoutedEventArgs e)
+        {
+            wmPlayer.controls.stop();
+            wmPlayer.URL = AUTOurl;
+            wmPlayer.controls.play();
+            player.Play();
+            Now_playing.Content = n + "Auto Radio";
             img.Visibility = Visibility.Visible;
         }
 

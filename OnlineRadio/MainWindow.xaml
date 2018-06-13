@@ -18,7 +18,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition Height="70"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Online Radio" FontSize="45" Foreground="White" FontFamily="Harlow Solid Italic"/>
+        <Label Grid.ColumnSpan="3" Margin="5" Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Online Radio" FontSize="60" Foreground="White" FontFamily="Harlow Solid Italic"/>
         <Image Source="Images\EarPhones.png" Margin="30" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Image>
         <Button Click="Button_Click" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" >
         <Image Source="Images\Arrow_Right.png"></Image>

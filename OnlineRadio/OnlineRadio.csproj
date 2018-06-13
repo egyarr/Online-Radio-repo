@@ -136,6 +136,8 @@
   <ItemGroup>
     <Resource Include="Images\Stop.png" />
     <Resource Include="Images\equalizer.gif" />
+    <Resource Include="Images\URL.png" />
+    <Resource Include="Images\Arrow_Left.png" />
     <Content Include="Music\Valve.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

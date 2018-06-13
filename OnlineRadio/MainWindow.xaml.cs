@@ -36,7 +36,8 @@ namespace OnlineRadio
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Here will be some text");
+            MessageBoxResult result = MessageBox.Show("This app was designed by Kokhanchuk Egor (BI172), " +
+                "Danila Schepelev (BI172) and Alexander Klimov (BI172). All links were copied from: https://vk.com/topic-103116043_34671966.");
         }
     }
 }

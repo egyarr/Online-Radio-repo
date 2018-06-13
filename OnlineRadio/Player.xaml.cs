@@ -20,6 +20,8 @@ namespace OnlineRadio
     /// </summary>
     public partial class Player : Window
     {
+        ListOfRadios l;
+
 
         WindowsMediaPlayer wmPlayer = new WindowsMediaPlayer();
         string URL;
@@ -27,7 +29,6 @@ namespace OnlineRadio
         public Player()
         {
             InitializeComponent();
-            URL = @"http://nashe1.hostingradio.ru/rock-128.mp3";
         }
 
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
@@ -39,6 +40,7 @@ namespace OnlineRadio
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            URL = textbox_url.Text;
             wmPlayer.URL = URL;
             wmPlayer.controls.pause();
             wmPlayer.controls.play();
@@ -49,6 +51,13 @@ namespace OnlineRadio
         {
             wmPlayer.controls.stop();
             player.Stop();
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            l = new ListOfRadios();
+            l.Show();
+            Window.GetWindow(this).Close();
         }
     }
 }
