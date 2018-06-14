@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using WMPLib;
 
 namespace OnlineRadio
@@ -21,17 +9,14 @@ namespace OnlineRadio
     public partial class Player : Window
     {
         ListOfRadios l;
-
-
         WindowsMediaPlayer wmPlayer = new WindowsMediaPlayer();
         string URL;
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 
         public Player()
         {
             InitializeComponent();
         }
-
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -45,12 +30,16 @@ namespace OnlineRadio
             wmPlayer.controls.pause();
             wmPlayer.controls.play();
             player.Play();
+            img.Visibility = Visibility.Visible;
+            img2.Visibility = Visibility.Visible;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             wmPlayer.controls.stop();
             player.Stop();
+            img.Visibility = Visibility.Hidden;
+            img2.Visibility = Visibility.Hidden;
         }
 
         private void Back(object sender, RoutedEventArgs e)

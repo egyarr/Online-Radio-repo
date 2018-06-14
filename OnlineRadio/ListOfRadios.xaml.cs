@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using WMPLib;
-using WpfAnimatedGif;
 
 namespace OnlineRadio
 {
@@ -21,12 +8,11 @@ namespace OnlineRadio
     /// </summary>
     public partial class ListOfRadios : Window
     {
-
         WindowsMediaPlayer wmPlayer = new WindowsMediaPlayer();
-        string ROCKurl, CHOCOurl, EUROurl, RETROurl, DORurl, RECurl, BUSurl, AUTOurl;
-        string n = "Now playing: ";
+        Player pl;
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        string n = "Now playing: ", ROCKurl, CHOCOurl, EUROurl, RETROurl, DORurl, RECurl, BUSurl, AUTOurl;
         
-
         public ListOfRadios()
         {
             InitializeComponent();
@@ -39,39 +25,14 @@ namespace OnlineRadio
             BUSurl = @"https://bfm.hostingradio.ru:9075/fm";
             AUTOurl = @"http://ic2.101.ru:8000/v3_1";
         }
-         
-        Player pl;
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    pl = new Player();
-        //    pl.Show();
-        //}
-
-        //private void Button_Click_1(object sender, RoutedEventArgs e)
-        //{
-        //    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"..\\..\\Music\\Valve.wav");
-        //    if (pl != null)
-        //    {                
-        //        player.Play();
-        //    }
-
-        //    if (pl == null)
-        //        pl = new Player();
-            
-        //    pl.Show();           
-        //    player.Play();
-        //}
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("In this window you can choose which radio do you want to listen. " +
+            MessageBoxResult result = MessageBox.Show("YOU SHOULD HAVE A STABLE INTERNET CONECTION TO USE THIS APP!!!. In this window you can choose which radio do you want to listen. " +
                 "Moreover, you can listen to your own internet radio stream by using CUSTOM URL button. " +
                 "There is a stop button at the bottom of the window. You will stop the music by pressing it. " +
                 "Enjoy yourself!");
         }
-
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             wmPlayer.controls.stop();
@@ -81,22 +42,18 @@ namespace OnlineRadio
             Now_playing.Content = n + "Rock Radio";
             img.Visibility = Visibility.Visible;
         }
-
         private void Stop_Button(object sender, RoutedEventArgs e)
         {
             wmPlayer.controls.stop();
             Now_playing.Content = "Nothing is playing now";
             img.Visibility = Visibility.Hidden;
         }
-
         private void ToPlayer(object sender, RoutedEventArgs e)
         {
-            
             pl = new Player();
             pl.Show();
             Window.GetWindow(this).Close();
         }
-
         private void Chocolate(object sender, RoutedEventArgs e)
         {
             wmPlayer.controls.stop();
@@ -160,7 +117,6 @@ namespace OnlineRadio
             Now_playing.Content = n + "Auto Radio";
             img.Visibility = Visibility.Visible;
         }
-
 
     }
 }

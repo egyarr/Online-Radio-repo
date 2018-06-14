@@ -131,9 +131,6 @@
     <Resource Include="Images\Pause.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ToPlayer.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Stop.png" />
     <Resource Include="Images\equalizer.gif" />
     <Resource Include="Images\URL.png" />
